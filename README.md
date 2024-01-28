@@ -2,7 +2,7 @@
 
 [![Crate](https://img.shields.io/crates/v/vfs.svg)](https://crates.io/crates/vfs)
 [![API](https://docs.rs/vfs/badge.svg)](https://docs.rs/vfs)
-![Minimum rustc version](https://img.shields.io/badge/rustc-1.61.0+-green.svg)
+![Minimum rustc version](https://img.shields.io/badge/rustc-1.63.0+-green.svg)
 [![Actions Status](https://github.com/manuel-woelker/rust-vfs/workflows/Continuous%20integration/badge.svg)](https://github.com/manuel-woelker/rust-vfs/actions?query=workflow%3A%22Continuous+integration%22)
 [![Build Status](https://travis-ci.org/manuel-woelker/rust-vfs.svg?branch=master)](https://travis-ci.org/manuel-woelker/rust-vfs)
 
@@ -18,11 +18,15 @@ This crate currently has the following implementations:
  * **OverlayFS** - an overlay file system combining two filesystems, an upper layer with read/write access and a lower layer with only read access
  * **EmbeddedFS** - a read-only file system embedded in the executable, requires `embedded-fs` feature, no async version available
  
-The minimum supported Rust version is 1.61.0.
+The minimum supported Rust version is 1.63.0.
  
 Comments and pull-requests welcome!
 
 ## Changelog
+
+### 0.10.1 (2023-02-18)
+* Unlocked tokio version to support projects that need higher versions of tokio.
+* Increased minimum supported Rust version to 1.63.0 in for compatibility with higher versions of tokio.
 
 ### 0.10.0 (2023-09-08)
 * Added async port of the crate, in a new module `async_vfs`.
